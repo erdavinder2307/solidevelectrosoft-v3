@@ -178,7 +178,7 @@
     height:787px;
     margin-top: -140px;
     position: relative;
-    z-index: -1;
+    z-index: 100;
     @media #{$xs} {
         height: 480px;
     }
