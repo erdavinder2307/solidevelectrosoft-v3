@@ -5622,3 +5622,13 @@ blockquote cite::before {
   width: 100%;
   height: 100%;
 }
+
+/* .quote-size{
+  height: 300px;
+  width: 500px;
+}
+
+
+.quote-size img{
+object-fit: scale-down;
+} */
