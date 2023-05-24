@@ -5632,3 +5632,6 @@ blockquote cite::before {
 .quote-size img{
 object-fit: scale-down;
 } */
+.tp-service.text-center.white-bg.pt-60.pb-45.pl-25.pr-25.mb-30 {
+  height: 100%;
+}
