@@ -14,6 +14,9 @@
 	// 01. PreLoader Js
 	windowOn.on('load', function () {
 		$("#loading").fadeOut(500);
+		var date = new Date();
+		var year = date.getFullYear();
+		$("#CurrentYear").text(year);
 	});
 
 
