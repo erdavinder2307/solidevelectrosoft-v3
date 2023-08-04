@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "solidevelectrosoft.com",
+  "Id": "64c97980-1093-4c80-b1cc-81971c292b57"
+}
