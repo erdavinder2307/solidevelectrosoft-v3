@@ -108,6 +108,31 @@
 	// 07. Nice Select Js
 	$('select').niceSelect();
 
+	function shuffle(array) {
+		var currentIndex = array.length,
+			temporaryValue, randomIndex;
+
+		// While there remain elements to shuffle...
+		while (0 !== currentIndex) {
+
+			// Pick a remaining element...
+			randomIndex = Math.floor(Math.random() * currentIndex);
+			currentIndex -= 1;
+
+			// And swap it with the current element.
+			temporaryValue = array[currentIndex];
+			array[currentIndex] = array[randomIndex];
+			array[randomIndex] = temporaryValue;
+		}
+
+		return array;
+	}
+
+	var quotes = shuffle($("#quotes>div").get());
+	$("#quotes").html(quotes);
+
+	var team = shuffle($("#team>div").get());
+	$("#team").html(team);
 
 	// mainSlider
 	function mainSlider() {
@@ -131,29 +156,29 @@
 			nextArrow: '<button type="button" class="slick-next"><span>Prev</span></i> </button>',
 			responsive: [
 				{
-				  breakpoint: 1024,
-				  settings: {
-		
-					infinite: true,
-					dots: true
-				  }
+					breakpoint: 1024,
+					settings: {
+
+						infinite: true,
+						dots: true
+					}
 				},
 				{
-				  breakpoint: 600,
-				  settings: {
-		
-				  }
+					breakpoint: 600,
+					settings: {
+
+					}
 				},
 				{
-				  breakpoint: 480,
-				  settings: {
-			
-				  }
+					breakpoint: 480,
+					settings: {
+
+					}
 				}
 				// You can unslick at a given breakpoint now by adding:
 				// settings: "unslick"
 				// instead of a settings object
-			  ]
+			]
 		});
 
 		function doAnimations(elements) {
@@ -192,7 +217,7 @@
 				}
 			},
 		]
-		
+
 	});
 
 	// home sliler-3
@@ -597,42 +622,42 @@
 		$(this).addClass('active').parent().siblings().find('.hover__active').removeClass('active');
 	});
 
-    // 11. Mouse Custom Cursor
-    function itCursor() {
-        var myCursor = jQuery(".mouseCursor");
-        if (myCursor.length) {
-            if ($("body")) {
-                const e = document.querySelector(".cursor-inner"),
-                    t = document.querySelector(".cursor-outer");
-                let n,
-                    i = 0,
-                    o = !1;
-                (window.onmousemove = function(s) {
-                    o ||
-                        (t.style.transform =
-                            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-                        (e.style.transform =
-                            "translate(" + s.clientX + "px, " + s.clientY + "px)"),
-                        (n = s.clientY),
-                        (i = s.clientX);
-                }),
-                $("body").on("mouseenter", "button, a, .cursor-pointer", function() {
-                        e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
-                    }),
-                    $("body").on("mouseleave", "button, a, .cursor-pointer", function() {
-                        ($(this).is("a", "button") &&
-                            $(this).closest(".cursor-pointer").length) ||
-                        (e.classList.remove("cursor-hover"),
-                            t.classList.remove("cursor-hover"));
-                    }),
-                    (e.style.visibility = "visible"),
-                    (t.style.visibility = "visible");
-            }
-        }
-    }
-    itCursor();
+	// 11. Mouse Custom Cursor
+	function itCursor() {
+		var myCursor = jQuery(".mouseCursor");
+		if (myCursor.length) {
+			if ($("body")) {
+				const e = document.querySelector(".cursor-inner"),
+					t = document.querySelector(".cursor-outer");
+				let n,
+					i = 0,
+					o = !1;
+				(window.onmousemove = function (s) {
+					o ||
+						(t.style.transform =
+							"translate(" + s.clientX + "px, " + s.clientY + "px)"),
+						(e.style.transform =
+							"translate(" + s.clientX + "px, " + s.clientY + "px)"),
+						(n = s.clientY),
+						(i = s.clientX);
+				}),
+					$("body").on("mouseenter", "button, a, .cursor-pointer", function () {
+						e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
+					}),
+					$("body").on("mouseleave", "button, a, .cursor-pointer", function () {
+						($(this).is("a", "button") &&
+							$(this).closest(".cursor-pointer").length) ||
+							(e.classList.remove("cursor-hover"),
+								t.classList.remove("cursor-hover"));
+					}),
+					(e.style.visibility = "visible"),
+					(t.style.visibility = "visible");
+			}
+		}
+	}
+	itCursor();
 
-	
+
 
 
 })(jQuery);
