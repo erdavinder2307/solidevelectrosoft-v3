@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://solidevelectrosoft.com/sitemap.xml
+
+# Disallow certain directories if any
+Disallow: /assets/
+Disallow: /*.zip
+Disallow: /ms68510576.txt
+
+# Allow images for indexing
+Allow: /assets/img/
+Allow: /assets/project-image/
+
+# Crawl delay
+Crawl-delay: 1
