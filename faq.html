@@ -459,12 +459,16 @@
                 <div class="row g-0">
                     <div class="col-lg-8">
                         <div class="tp-contact-form tp-contact-form-2 white-bg pt-50 pl-50 pr-50 pb-55 mr-60">
+                            <!-- Message Display Area -->
+                            <div class="ajax-response" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 5px; text-align: center;">
+                            </div>
+                            
                             <h4 class="tp-contact-form-title">Direct Contact with us</h4>
-                            <form name="form" action="https://formspree.io/f/mpzeeqln" method="POST">
+                            <form name="form" id="faq-contact-form" action="assets/mail.php" method="POST">
                                 <input type="text" name="name" placeholder="Enter your name*" required> <br>
                                 <input type="email" name="email" placeholder="Enter your email*" required><br>
                                 <textarea name="message" placeholder="Enter your message*" required></textarea>
-                                <button type="submit" onblur="document.form.reset();" class="tp-btn-border">Send Message<span><svg width="22" height="8"
+                                <button type="submit" class="tp-btn-border">Send Message<span><svg width="22" height="8"
                                             viewBox="0 0 22 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M21.3536 4.35356C21.5488 4.15829 21.5488 3.84171 21.3536 3.64645L18.1716 0.464468C17.9763 0.269205 17.6597 0.269205 17.4645 0.464468C17.2692 0.65973 17.2692 0.976312 17.4645 1.17157L20.2929 4L17.4645 6.82843C17.2692 7.02369 17.2692 7.34027 17.4645 7.53554C17.6597 7.7308 17.9763 7.7308 18.1716 7.53554L21.3536 4.35356ZM-4.37114e-08 4.5L21 4.5L21 3.5L4.37114e-08 3.5L-4.37114e-08 4.5Z"
@@ -651,6 +655,82 @@
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Floating Multi-Action Menu -->
+    <div class="floating-menu">
+        <div class="floating-menu-trigger" onclick="toggleFloatingMenu()">
+            <i class="fas fa-headset"></i>
+            <span class="tooltip">Need Help?</span>
+        </div>
+        <div class="floating-menu-items">
+            <div class="floating-menu-item" onclick="window.open('tel:+919876543210', '_self')">
+                <i class="fas fa-phone"></i>
+                <span class="tooltip">Call Now</span>
+            </div>
+            <div class="floating-menu-item" onclick="window.open('https://wa.me/919876543210?text=Hello%20Solidev%20Electrosoft,%20I%20need%20assistance%20with%20your%20services.', '_blank')">
+                <i class="fab fa-whatsapp"></i>
+                <span class="tooltip">WhatsApp</span>
+            </div>
+            <div class="floating-menu-item" onclick="openQueryModal()">
+                <i class="fas fa-envelope"></i>
+                <span class="tooltip">Send Query</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Query Modal -->
+    <div class="query-modal" id="queryModal">
+        <div class="query-modal-content">
+            <div class="query-modal-header">
+                <h3>Send us a Query</h3>
+                <span class="query-modal-close" onclick="closeQueryModal()">&times;</span>
+            </div>
+            <div class="query-modal-body">
+                <!-- Message Display Area -->
+                <div class="ajax-response" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 5px; text-align: center;">
+                </div>
+                
+                <form id="floating-query-form" action="assets/mail.php" method="POST">
+                    <div class="form-group">
+                        <label for="floatingName">Your Name *</label>
+                        <input type="text" id="floatingName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="floatingEmail">Your Email *</label>
+                        <input type="email" id="floatingEmail" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="floatingMessage">Your Message *</label>
+                        <textarea id="floatingMessage" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="query-submit-btn">Send Query</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleFloatingMenu() {
+            const menu = document.querySelector('.floating-menu');
+            menu.classList.toggle('active');
+        }
+
+        function openQueryModal() {
+            document.getElementById('queryModal').style.display = 'block';
+        }
+
+        function closeQueryModal() {
+            document.getElementById('queryModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('queryModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 
 </html>
