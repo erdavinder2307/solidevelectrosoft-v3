@@ -15,121 +15,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>About Solidev Electrosoft - Professional Web & Mobile App Development Company</title>
     <meta name="description" content="Learn about Solidev Electrosoft, a leading software development company established in 2018. Expert team specializing in .NET, Angular, React, Unity 3D, and mobile app development.">
-    <meme="keywords" content="about solidev electrosoft, web development company, mobile app development, .NET development, Angular, React, Unity 3D, software solutions">
-   <script src="assets/js/ajax-form.js"></script>
-   <script src="assets/js/main.js"></script>
-
-   <!-- Multi-Action Floating Menu -->
-   <div class="floating-menu">
-      <!-- Main Toggle Button -->
-      <button class="floating-menu-toggle" id="floatingMenuToggle" aria-label="Open floating menu">
-         <i class="fas fa-plus"></i>
-      </button>
-      
-      <!-- Action Buttons -->
-      <div class="floating-menu-items" id="floatingMenuItems">
-         <!-- Call Button -->
-         <a href="tel:+919115866828" class="floating-menu-item call-btn" data-tooltip="Call us">
-            <i class="fas fa-phone"></i>
-         </a>
-         
-         <!-- WhatsApp Button -->
-         <a href="https://wa.me/919115866828" target="_blank" class="floating-menu-item whatsapp-btn" data-tooltip="WhatsApp us">
-            <i class="fab fa-whatsapp"></i>
-         </a>
-         
-         <!-- Query Button -->
-         <button class="floating-menu-item query-btn" id="queryBtn" data-tooltip="Send Query">
-            <i class="fas fa-envelope"></i>
-         </button>
-      </div>
-   </div>
-
-   <!-- Query Modal -->
-   <div class="query-modal" id="queryModal">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h3>Send us a Query</h3>
-            <button class="modal-close" id="modalClose">&times;</button>
-         </div>
-         <div class="modal-body">
-            <form class="query-form" id="queryForm">
-               <div class="form-group">
-                  <label for="queryName">Name</label>
-                  <input type="text" id="queryName" name="name" required>
-               </div>
-               <div class="form-group">
-                  <label for="queryPhone">Phone</label>
-                  <input type="tel" id="queryPhone" name="phone" required>
-               </div>
-               <div class="form-group">
-                  <label for="queryMessage">Message</label>
-                  <textarea id="queryMessage" name="message" rows="4" required></textarea>
-               </div>
-               <button type="submit" class="submit-btn">Submit Query</button>
-            </form>
-         </div>
-      </div>
-   </div>
-
-   <!-- Floating Menu JavaScript -->
-   <script>
-      document.addEventListener('DOMContentLoaded', function() {
-         const toggleBtn = document.getElementById('floatingMenuToggle');
-         const menuItems = document.getElementById('floatingMenuItems');
-         const queryBtn = document.getElementById('queryBtn');
-         const queryModal = document.getElementById('queryModal');
-         const modalClose = document.getElementById('modalClose');
-         
-         let isMenuOpen = false;
-         
-         // Toggle floating menu
-         toggleBtn.addEventListener('click', function() {
-            isMenuOpen = !isMenuOpen;
-            
-            if (isMenuOpen) {
-               menuItems.classList.add('active');
-               toggleBtn.classList.add('active');
-            } else {
-               menuItems.classList.remove('active');
-               toggleBtn.classList.remove('active');
-            }
-         });
-         
-         // Open query modal
-         queryBtn.addEventListener('click', function() {
-            queryModal.classList.add('active');
-            // Close floating menu when modal opens
-            isMenuOpen = false;
-            menuItems.classList.remove('active');
-            toggleBtn.classList.remove('active');
-         });
-         
-         // Close modal
-         modalClose.addEventListener('click', function() {
-            queryModal.classList.remove('active');
-         });
-         
-         // Close modal when clicking outside
-         queryModal.addEventListener('click', function(e) {
-            if (e.target === queryModal) {
-               queryModal.classList.remove('active');
-            }
-         });
-         
-         // Close menu when clicking outside
-         document.addEventListener('click', function(e) {
-            if (!e.target.closest('.floating-menu') && isMenuOpen) {
-               isMenuOpen = false;
-               menuItems.classList.remove('active');
-               toggleBtn.classList.remove('active');
-            }
-         });
-         
-         // Form submission is now handled by ajax-form.js
-      });
-   </script>
-
+    <meta name="keywords" content="about solidev electrosoft, web development company, mobile app development, .NET development, Angular, React, Unity 3D, software solutions">
     <meta name="author" content="Solidev Electrosoft">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -783,6 +669,41 @@
             </div>
         </div>
         <!-- brand section end  -->
+
+        <!-- full screen btn area  -->
+        <div class="tp-theme-btn-area pt-90 pb-140">
+            <div class="container">
+                <div class="row justify-content-center p-relative">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <a href="contact.html">
+                            <div class="tp-theme-btn d-flex align-items-center white-bg">
+                                <div class="tp-btn-inner">
+                                    <p class="mb-0">Let's Talk</p>
+                                    <b>Get in Touch</b>
+                                    <span class="d-inline-block">
+                                        <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                        <svg width="46" height="8" viewBox="0 0 46 8" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M45.3536 4.35355C45.5488 4.15829 45.5488 3.84171 45.3536 3.64645L42.1716 0.464466C41.9763 0.269204 41.6597 0.269204 41.4645 0.464466C41.2692 0.659728 41.2692 0.976311 41.4645 1.17157L44.2929 4L41.4645 6.82843C41.2692 7.02369 41.2692 7.34027 41.4645 7.53553C41.6597 7.7308 41.9763 7.7308 42.1716 7.53553L45.3536 4.35355ZM0 4.5H45V3.5H0V4.5Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="tp-hr-border">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- full screen btn area end  -->
     </main>
 
     <!-- footer area start -->
@@ -928,6 +849,117 @@
     <script src="assets/js/imagesloaded-pkgd.js"></script>
     <script src="assets/js/ajax-form.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Multi-Action Floating Menu -->
+    <div class="floating-menu">
+        <!-- Main Toggle Button -->
+        <button class="floating-menu-toggle" id="floatingMenuToggle" aria-label="Open floating menu">
+            <i class="fas fa-plus"></i>
+        </button>
+        
+        <!-- Action Buttons -->
+        <div class="floating-menu-items" id="floatingMenuItems">
+            <!-- Call Button -->
+            <a href="tel:+919115866828" class="floating-menu-item call-btn" data-tooltip="Call us">
+                <i class="fas fa-phone"></i>
+            </a>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/919115866828" target="_blank" class="floating-menu-item whatsapp-btn" data-tooltip="WhatsApp us">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            
+            <!-- Query Button -->
+            <button class="floating-menu-item query-btn" id="queryBtn" data-tooltip="Send Query">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Query Modal -->
+    <div class="query-modal" id="queryModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Send us a Query</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="query-form" id="queryForm">
+                    <div class="form-group">
+                        <label for="queryName">Name</label>
+                        <input type="text" id="queryName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="queryPhone">Phone</label>
+                        <input type="tel" id="queryPhone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="queryMessage">Message</label>
+                        <textarea id="queryMessage" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Query</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Menu JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleBtn = document.getElementById('floatingMenuToggle');
+            const menuItems = document.getElementById('floatingMenuItems');
+            const queryBtn = document.getElementById('queryBtn');
+            const queryModal = document.getElementById('queryModal');
+            const modalClose = document.getElementById('modalClose');
+            
+            let isMenuOpen = false;
+            
+            // Toggle floating menu
+            toggleBtn.addEventListener('click', function() {
+                isMenuOpen = !isMenuOpen;
+                
+                if (isMenuOpen) {
+                    menuItems.classList.add('active');
+                    toggleBtn.classList.add('active');
+                } else {
+                    menuItems.classList.remove('active');
+                    toggleBtn.classList.remove('active');
+                }
+            });
+            
+            // Open query modal
+            queryBtn.addEventListener('click', function() {
+                queryModal.classList.add('active');
+                // Close floating menu when modal opens
+                isMenuOpen = false;
+                menuItems.classList.remove('active');
+                toggleBtn.classList.remove('active');
+            });
+            
+            // Close modal
+            modalClose.addEventListener('click', function() {
+                queryModal.classList.remove('active');
+            });
+            
+            // Close modal when clicking outside
+            queryModal.addEventListener('click', function(e) {
+                if (e.target === queryModal) {
+                    queryModal.classList.remove('active');
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.floating-menu') && isMenuOpen) {
+                    isMenuOpen = false;
+                    menuItems.classList.remove('active');
+                    toggleBtn.classList.remove('active');
+                }
+            });
+            
+            // Form submission is now handled by ajax-form.js
+        });
+    </script>
 </body>
 
 </html>
